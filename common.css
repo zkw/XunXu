@@ -1,0 +1,21 @@
+@import url("https://file.kw92.cyou/Noto-Serif-SC-CSS-master/noto_serif_sc_semi_bold/css.css");
+@import url("https://file.kw92.cyou/Noto-Serif-SC-CSS-master/noto_serif_sc_black/css.css");
+body {
+  font-family: "Noto Serif SC";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  text-align: justify;
+}
+.katex {
+  font-size: 1.1em !important;
+}
+.code-viewer {
+  font-weight: normal;
+}
+strong {
+  font-weight: 900 !important;
+}
+code {
+  font-size: 1.05em !important;
+}
