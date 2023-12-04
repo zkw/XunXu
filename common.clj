@@ -5,9 +5,9 @@
 
 (defn markdowns []
   (let [files (file-seq (File. "."))]
-    (map #(clojure.string/replace % #"\.md$" "")
-         (filter #(clojure.string/ends-with? % ".md")
-                 (map #(.getName %) files)))))
+    (sort (map #(clojure.string/replace % #"\.md$" "")
+               (filter #(clojure.string/ends-with? % ".md")
+                       (map #(.getName %) files))))))
 
 (defn build [] (conj (map #(str % ".md") (markdowns)) "index.clj"))
 
