@@ -5,6 +5,4 @@
  :aliases {:nextjournal/clerk
            {:exec-fn nextjournal.clerk/build!
             :exec-args
-            {:paths
-             ["index.clj"
-              "Bronze-2011-11-P01.md"]}}}}
+            {:paths-fn common/build}}}}

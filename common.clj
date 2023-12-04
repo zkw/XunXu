@@ -1,3 +1,11 @@
-(ns common)
+(ns common
+  (:require [clojure.string])
+  (:import java.io.File))
 
-(def markdowns ["Bronze-2011-11-P01"])
+(defn markdowns []
+  (let [files (file-seq (File. "."))]
+    (map #(clojure.string/replace % #"\.md$" "")
+         (filter #(clojure.string/ends-with? % ".md")
+                 (map #(.getName %) files)))))
+
+(defn build [] (conj (map #(str % ".md") (markdowns)) "index.clj"))
