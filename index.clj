@@ -1,6 +1,9 @@
+^{:nextjournal.clerk/visibility #{:hide-ns}}
 (ns index
   (:require [common]
             [nextjournal.clerk :as clerk]))
+{:nextjournal.clerk/visibility {:code :hide}}
+(clerk/html [:style (slurp "common.css")])
 
 (clerk/md "## 张昆玮的小站\n\n# USACO 解题练习\n\n")
 
