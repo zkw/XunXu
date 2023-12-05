@@ -1,10 +1,11 @@
 (ns index
-  {:nextjournal.clerk/visibility {:code :hide}}
-  (:require common)
-  (:require [nextjournal.clerk :as clerk]))
+  (:require [common]
+            [nextjournal.clerk :as clerk]))
 
-^{:nextjournal.clerk/no-cache true}
+(clerk/md "## 张昆玮的小站\n\n# USACO 解题练习\n\n")
+
 (clerk/html
- (into [:div.md:grid.md:gap-8.md:grid-cols-1.pb-8]
-       (map (fn [path] [:a {:href (clerk/doc-url path)} path])
-            (common/markdowns))))
+ (list [:h2 "铜组"]
+       (into [:ul.m-0]
+             (for [path (common/markdowns)]
+               [:li [:a {:href (clerk/doc-url path)} path]]))))

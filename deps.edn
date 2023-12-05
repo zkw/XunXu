@@ -1,8 +1,5 @@
 {:paths ["."]
- :deps {io.github.nextjournal/clerk {:mvn/version "0.15.957"}
-        ;; keep 1.10 until `kixi/stats` and `sicmutils` fix warnings
-        org.clojure/clojure {:mvn/version "1.10.3"}}
+ :deps {io.github.nextjournal/clerk {:mvn/version "0.15.957"}}
  :aliases {:nextjournal/clerk
            {:exec-fn nextjournal.clerk/build!
-            :exec-args
-            {:paths-fn common/build}}}}
+            :exec-args {:paths-fn common/build}}}}
