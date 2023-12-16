@@ -27,7 +27,7 @@ bool Like(vector<int>& a, vector<int>& b) {
     return a == b;
 }
 
-vector<int> IndicesChord(const vector<int> music, vector<int>& chord) {
+vector<int> IndicesChord(const vector<int>& music, vector<int>& chord) {
     vector<int> answer;
     for (int i = 0; i < music.size(); ++i) {
         auto submusic = Subvector(music, i, chord.size());
