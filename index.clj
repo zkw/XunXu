@@ -5,11 +5,11 @@
 {::clerk/visibility {:code :hide}}
 (clerk/html [:style (slurp "common.css")])
 
-(clerk/md "## 张昆玮的小站\n\n# USACO 解题练习\n\n")
+(clerk/md "# 《循序渐进信息学竞赛》系列课程\n\n")
 
 ^{::clerk/no-cache true}
 (clerk/html
- (list [:h2 "铜组"]
+ (list [:h2 "目录"]
        (into [:ul.m-0]
              (for [path (common/markdowns)]
                [:li [:a {:href (clerk/doc-url path)} path]]))))
